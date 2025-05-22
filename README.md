@@ -1,102 +1,100 @@
-✅ README.md (Step-by-Step Procedure) markdown Copy Edit 💧AQUACULTURE AND MONITORING (Arduino Simulation)
-
-This project simulates a basic aquaculture and monitoring using an Arduino and potentiometers to represent environmental sensors like:
+📌 Project Overview
+The IoT – Aquaculture and Monitoring system is a prototype that simulates a smart aquaculture environment using Arduino-based hardware. It aims to monitor key water quality parameters such as:
 
 pH Level
+
 Turbidity
+
 Dissolved Oxygen (DO)
-Ammonia (NH3)
+
+Ammonia Concentration
+
 Water Level
-It prints data to the Serial Monitor and provides real-time evaluation of water conditions.
 
-📦 Components Required
+Using potentiometers as simulated sensors, the system alerts the user when environmental thresholds are breached. It is a foundation for a real-world IoT-enabled aquaculture monitoring solution.
 
-Component	Quantity
-Arduino Uno	1
-Potentiometers	5
-Breadboard	1
-Jumper Wires	Several
-USB Cable (for Arduino)	1
-🧾 Pin Configuration
+⚙️ Technologies Used
+Arduino Uno
 
-Sensor	Arduino Pin
-pH Sensor	A0
-Turbidity Sensor	A1
-DO Sensor	A2
-Water Level Sensor	A4
-Ammonia Sensor	A5
-All sensors are simulated using potentiometers.
+Potentiometers (Sensor Simulation)
 
-🛠 Step-by-Step Setup Instructions
+Arduino IDE (Software Logic)
 
-1️⃣ Clone the Repository
+Serial Monitor (Data Output)
 
-git clone https://github.com/yourusername/WaterQualityMonitoring.git
-cd WaterQualityMonitoring
-Replace yourusername with your actual GitHub username.
+Future Scope: ESP8266/NodeMCU, Cloud (ThingSpeak/Blynk), Real Sensors
 
-2️⃣ Open the Code in Arduino IDE
-Open Arduino IDE
+🧪 Key Features
+Real-time data monitoring and alerts
 
-Go to File > Open
+Sensor simulation with mapped ranges
 
-Browse to aquacultureandmonitoring.ino file from the cloned folder
+Outputs displayed per second via Serial Monitor
 
-3️⃣ Connect Your Arduino
-Plug the Arduino board into your PC via USB cable
+Modular design for easy sensor replacement and scaling
 
-4️⃣ Select the Board and Port
-Go to:
+Designed for integration with IoT platforms
 
-Tools > Board > Arduino Uno
+🛠️ Setup Instructions
+Hardware:
+Connect five potentiometers to analog pins A0–A5 on Arduino Uno:
 
-Tools > Port > (Select your COM port)
+A0 – pH sensor
 
-5️⃣ Upload the Code
-Click on the ✅ Verify button
+A1 – Turbidity sensor
 
-Then click the ➡ Upload button
+A2 – DO sensor
 
-6️⃣ Open Serial Monitor
-Go to Tools > Serial Monitor
+A4 – Water level
 
-Set baud rate to 9600
+A5 – Ammonia sensor
 
-7️⃣ Simulate Readings
-Rotate each potentiometer to simulate different values for:
+Connect Arduino Uno to PC via USB.
 
-pH level (A0)
+Software:
+Open Arduino IDE.
 
-Turbidity (A1)
+Upload the provided sketch.
 
-DO (A2)
+Open Serial Monitor at 9600 baud rate to view real-time feedback.
 
-Water level (A4)
+📘 Documentation Contents
+System Architecture (block diagrams, sensor flow)
 
-Ammonia (A5)
+Source Code (with comments and thresholds)
 
-📊 Output Example
+User Guide (how to use system and read outputs)
+
+Admin Guide (adjusting thresholds, maintenance)
+
+Testing Report (various scenarios and expected outputs)
+
+Final Report (summary of entire project life cycle)
+
+✅ Completed Phases
+Functional demonstration
+
+Documentation and feedback incorporation
+
+Final testing and validation
+
+Project handover with hardware, software, and documents
+
+🚀 Future Enhancements
+Replace simulations with actual sensors
+
+Enable wireless data transfer using Wi-Fi modules
+
+Integrate with cloud dashboards for remote access
+
+Add real-time notifications (SMS/Email)
+
+Build a mobile/web app for visualization
+
+📦 Output Examples (Serial Monitor):
 yaml
 Copy
 Edit
-pH Voltage: 2.50 | Turbidity: 420 | DO: 55.00 % | Ammonia: 22.00 % | Distance: 25
-Water is clean
-Water level: Normal
-Dissolved oxygen is within safe range
-Ammonia concentration is within safe range
-📋 Functional Highlights
-Checks if water is clean based on turbidity and pH
+pH: Alkaline | DO: Normal | Turbidity: Clean | Water Level: 35 cm | Ammonia: Safe
+ALERT: Water too alkaline. Check filtration.
 
-Monitors safe levels of:
-
-Dissolved Oxygen (DO)
-
-Ammonia (NH3)
-
-Displays water level status:
-
-Full
-
-Normal
-
-Too Low# aqua-culture-monitoring
